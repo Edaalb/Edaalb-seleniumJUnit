@@ -38,6 +38,7 @@ public class ReusableMethods {
         // 3- tss objesi kullanarak ekran goruntusu alip, gecici dosyaya kaydet
 
         File geciciDopsya= tss.getScreenshotAs(OutputType.FILE);
+
         // 4- gecici dosyayi ana dosyaya kopyala
 
         try {

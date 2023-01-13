@@ -1,8 +1,7 @@
 package day12_webtables_excel;
 
-
-//import org.apache.poi.ss.usermodel.Workbook;
-//import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,7 +14,7 @@ import java.util.TreeMap;
 public class C03_ReadExcel {
     @Test
     public void test01() throws IOException {
-/*
+
         // Ulkeler excel'indeki sayfa1'e gidecek sekilde ayarlari yapalim
 
         String dosyaYolu= "src/test/java/day12_webtables_excel/ulkeler.xlsx";
@@ -36,12 +35,15 @@ public class C03_ReadExcel {
 
         //		- Satir sayisini bulalim
         System.out.println("Satir sayisi : "+ (workbook.getSheet("Sayfa1").getLastRowNum()+1));
+                                                 //index sayısı 0'dan başladığı için +1 ekledik
+
         //		- Fiziki olarak kullanilan satir sayisini bulun
         //      Bunun icin Sayfa2 deki son satir indexi'ni ve fiziki kullanilan satir sayisini yazdiralim
 
         System.out.println("2.sayfa son satir indexi : "+ workbook.getSheet("Sayfa2").getLastRowNum());
 
         System.out.println("2.sayfa fiziki kullanilan satir sayisi : "+workbook.getSheet("Sayfa2").getPhysicalNumberOfRows());
+
         //		- Ingilizce Ulke isimleri ve baskentleri bir map olarak kaydedelim
         //  Ulke ismi ingilizce ==> key, geriye kalan 3 bilgi ise birlestirilerek value olsun
 
@@ -62,7 +64,7 @@ public class C03_ReadExcel {
             ulkelerMap.put(key,value);
         }
 
-        System.out.println(ulkelerMap);  */
+        System.out.println(ulkelerMap);
     }
 }
 
