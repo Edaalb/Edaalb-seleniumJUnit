@@ -1,4 +1,4 @@
-package day11_seleniumwaits_cookies;
+package day12_webtables_excel;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -58,6 +58,7 @@ public class C04_WebTables extends TestBase {
         // hucredeki bilgiyi döndüren bir method olusturun
 
         System.out.println("==================");
+                                        //sağ click + method oluştur'a tıkladığında otomatik oluşturur
         WebElement istenenDataElementi= getElement(5,7);
         System.out.println(istenenDataElementi.getText());
 
@@ -67,11 +68,11 @@ public class C04_WebTables extends TestBase {
     private WebElement getElement(int satir, int sutun) {
 
         //     //tbody/tr[5]/td[7]
-
+                                          //5'in yerine       //7'nin yerine
         String dinamikXpath="//tbody/tr["+ satir +"]/td["+ sutun +"]";
 
         WebElement istenenElement= driver.findElement(By.xpath(dinamikXpath));
-
+        //bir elementi dinamik olarak bulabilmek için xpath'i dinamik olarak yazarız
 
         return istenenElement;
     }

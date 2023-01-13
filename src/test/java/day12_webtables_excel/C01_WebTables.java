@@ -14,13 +14,16 @@ public class C01_WebTables extends TestBase {
 
         //  1. “https://demoqa.com/webtables” sayfasina gidin
         driver.get("https://demoqa.com/webtables");
+
         //  2. Headers da bulunan basliklari yazdirin
         WebElement headerElementi= driver.findElement(By.xpath("//div[@class='rt-thead -header']"));
         System.out.println("basliktaki bilgiler : "+headerElementi.getText());
+
         //  3. 3.sutunun basligini yazdirin
 
         List<WebElement> basliklarListesi= driver.findElements(By.xpath("//div[@class='rt-th rt-resizable-header -cursor-pointer']"));
         System.out.println("3.sutunun basligi : " + basliklarListesi.get(2).getText());
+
         //  4. Tablodaki tum datalari yazdirin
 
         WebElement bodyElementi=driver.findElement(By.xpath("//div[@class='rt-tbody']"));
@@ -44,7 +47,9 @@ public class C01_WebTables extends TestBase {
 
         //  7. Tablodaki sutun sayisini yazdirin
         //     Basta basliklar listesi olusturmustuk, onun size'ini alalim
+
         System.out.println("Sutun sayisi : " + basliklarListesi.size());
+
         //  8. Tablodaki 3.kolonu yazdirin
         List<WebElement> ucuncuSutunDatalarListesi= driver.findElements(By.xpath("((//div[@class='rt-tr-group']))//div[1]/div[3]"));
 
